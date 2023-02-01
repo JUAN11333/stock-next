@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ABOUT PAGE</title>
+        <title>MAY PAGE</title>
       </Head>
-      <h1>ABOUT MAY</h1>
-      <p>THIS IS ABOUT MAY.</p>
+      <h1>MAY MAY</h1>
+      <p>THIS IS MAY.</p>
       <Link href="/about">About</Link>
     </>
   );
