@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function Home({ blogs }) {
   function deleteBlog(id) {
-    fetch(`http://localhost:3000/api/blogs/articles/${id}`, {
+    fetch(`/api/blogs/articles/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -31,7 +31,10 @@ export default function Home({ blogs }) {
                 <td>
                   <Link href={`/blogs/${blog._id}`}>{blog.title}</Link>
                 </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td>
+                  <Link href={`/blogs/update/${blog._id}`}>Update</Link>
+                  &nbsp;&nbsp;&nbsp;
                   <button onClick={() => deleteBlog(blog._id)}>Delete</button>
                 </td>
               </tr>
