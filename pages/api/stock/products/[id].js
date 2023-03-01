@@ -1,10 +1,10 @@
 import ProductPage from "@/pages/products/[id]";
 import { connect, model, models, Schema } from "mongoose";
-const connectionString =
-  "mongodb+srv://may:SXYJ79KCcNwUbPaa@cluster0.qltslov.mongodb.net/stock";
+// const connectionString =
+//   "mongodb+srv://may:SXYJ79KCcNwUbPaa@cluster0.qltslov.mongodb.net/stock";
 
 export default async function handler(req, res) {
-  await connect(connectionString);
+  await connect(process.env.MONGODB_URI);
   console.log("req.method: ", req.method);
   console.log("req.query.id", req.query.id);
 
